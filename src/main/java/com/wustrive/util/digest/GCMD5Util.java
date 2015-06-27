@@ -7,13 +7,7 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 
 import org.apache.log4j.Logger;
-/**
- * 
- * @ClassName:     GCMD5Util
- * @Description:TODO(完成密码MD5的加密)
- * @author:    Chivalrous
- * @date:        2012-11-23 下午3:57:08
- */
+
 public class GCMD5Util {
 	private static final Logger log = Logger.getLogger(GCMD5Util.class);
 	private static final String HEX_NUMS_STR = "0123456789ABCDEF";
