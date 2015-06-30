@@ -79,5 +79,19 @@
 	    <version>140</version>
 	</dependency>
 	
+	<!-- MINA begin -->
+	<dependency>
+	  <groupId>org.apache.mina</groupId>
+	  <artifactId>mina-core</artifactId>
+	  <version>2.0.7</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>org.apache.mina</groupId>
+	  <artifactId>mina-filter-ssl</artifactId>
+	  <version>1.1.7</version>
+	</dependency>
+	<!-- MINA end -->
+	
   </dependencies>
 </project>
