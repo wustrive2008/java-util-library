@@ -1,5 +1,8 @@
 package com.wustrive.util.string;
 
+import java.nio.ByteBuffer;
+import java.nio.charset.CharacterCodingException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -150,6 +153,17 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 			return "";
 		}
 		
+	}
+	
+	public static void main(String[] args) throws CharacterCodingException {
+		  byte[] buff = "ADC03525ADC0".getBytes();
+		  byte[] newByte = new byte[buff.length+3];
+		  newByte[0] = (byte)0x08;
+		  newByte[1] = (byte)0xAC;
+		  System.arraycopy(buff, 0, newByte, 2, 12);
+		  newByte[14] = (byte)0x03;
+		  
+		  System.out.println(new String(newByte));
 	}
 
 }

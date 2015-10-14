@@ -837,4 +837,48 @@ public class DateTimeUtils {
 		calendar.set(Calendar.SECOND, 0);
 		return formatDateToString(pattern_yyyy_MM_dd_HH_mm_ss, calendar.getTime());
 	}
+	
+	/**
+	 * 判断日期是否合法
+	 * @param date
+	 * @return
+	 */
+	public static boolean validDate(String date){
+		DateFormat df = new SimpleDateFormat(pattern_yyyy_MM_dd);
+		df.setLenient(false);
+		try{
+			df.parse(date);
+			return true;
+		}catch (Exception e){
+        // 如果throw java.text.ParseException或者NullPointerException，就说明格式不对
+			return false;
+		}
+	}
+	
+	/**
+	 * 判断传入的时间是否大于当前时间
+	 * @param date
+	 * @return
+	 */
+	public static boolean isLongerThanNow(String date) {
+		boolean msg = false;
+		Date orderDate = DateTimeUtils.parseStringToDate(	DateTimeUtils.pattern_yyyy_MM_dd_HH_mm_ss,
+															date);
+		Date nowDate = Calendar.getInstance().getTime();
+		if (nowDate.before(orderDate)) {
+			msg = true;
+		}
+		return msg;
+	}
+	
+	/**
+	 * 获取两个时间的小时差
+	 * 
+	 * @param date1
+	 * @param date2
+	 * @return
+	 */
+	public static int getSubHour(Date date1, Date date2) {
+		return (int) ((date1.getTime() - date2.getTime()) / 1000 / 60 / 60);
+	}
 }
