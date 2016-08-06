@@ -1,6 +1,6 @@
 package com.wustrive.util.digest;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.apache.commons.codec.binary.Base64;
 import org.junit.Test;
@@ -18,7 +18,7 @@ public class AESCoderTest {
          System. err.println("原文:\t" + inputStr);
 
           // 初始化密钥
-          byte[] key = AESCoderBounc.initKey();
+          byte[] key = AESCoderBounc.initKey(128);
          System. err.println("密钥:\t" + Base64.encodeBase64String(key));
 
           // 加密
