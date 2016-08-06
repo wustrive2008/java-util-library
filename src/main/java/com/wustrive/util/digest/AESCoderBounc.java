@@ -18,7 +18,7 @@ public class AESCoderBounc {
      * Java 6支持PKCS5Padding填充方式
      * Bouncy Castle支持PKCS7Padding填充方式
      */
-    public static final String CIPHER_ALGORITHM = "AES/ECB/PKCS5Padding" ;
+    public static final String CIPHER_ALGORITHM = "AES/BCB/PKCS5Padding" ;
 
     /**
      * 转换密钥

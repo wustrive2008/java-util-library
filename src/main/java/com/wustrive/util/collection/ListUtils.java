@@ -63,4 +63,26 @@ public class ListUtils extends org.apache.commons.collections.ListUtils {
 			return false;
 		}
 	}
+	
+	/**
+	 * List分页
+	 * @param list
+	 * @param page
+	 * @param pageSize
+	 * @return
+	 */
+	public static <T> List<T> getSubByPage(List<T> list,int page,int pageSize){
+		int total = list.size();
+		int fromIndex = page * pageSize;
+		int toIndex = (page + 1) * pageSize;
+		if(fromIndex > total - 1){
+			fromIndex = 0;
+		}
+		if(toIndex > total -1 ){
+			toIndex = total;
+		}
+		
+		return list.subList(fromIndex, toIndex);
+	}
+	
 }
