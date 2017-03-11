@@ -7,7 +7,16 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
+/**
+ * 
+ * @Title: ListUtils.java
+ * @ClassName: com.wustrive.util.collection.ListUtils
+ * @Description: TODO
+ *
+ * Copyright  2015-2017 维创盈通 - Powered By 研发中心 V1.0.0
+ * @author wustrive
+ * @date 2017年3月11日 上午9:57:11
+ */
 public class ListUtils extends org.apache.commons.collections.ListUtils {
 
 	/**
