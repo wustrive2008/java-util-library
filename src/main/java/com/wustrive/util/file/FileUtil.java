@@ -6,7 +6,8 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
@@ -14,7 +15,7 @@ import com.google.common.io.LineProcessor;
 
 public class FileUtil {
 	
-	private final static Logger log = Logger.getLogger(FileUtil.class);
+    protected static final Logger log = LoggerFactory.getLogger(FileUtil.class);  
 	
 	private String fileName;
 	
@@ -102,12 +103,12 @@ public class FileUtil {
 		
 		List<String> lines = fileUtil.readSmallFile();
 		for (String string : lines) {
-			System.out.println(string);
+		    log.error("{}",string);
 		}
 		
 		lines = fileUtil.readLargeFile();
 		for (String string : lines) {
-			System.out.println(string);
+		    log.error("{}",string);
 		}
 	}
 }

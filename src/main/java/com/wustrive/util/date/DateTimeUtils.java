@@ -881,4 +881,26 @@ public class DateTimeUtils {
 	public static int getSubHour(Date date1, Date date2) {
 		return (int) ((date1.getTime() - date2.getTime()) / 1000 / 60 / 60);
 	}
+	
+	/**
+     * 指定时间根据指定格式转换
+     * 
+     * @param date
+     * @param formater
+     * @return
+     */
+    public static String formaterDate(Date date, String formater) {
+        if (!isDate(date)) {
+            return "";
+        }
+        if (StringUtils.isBlank(formater)) {
+            formater = pattern_yyyy_MM_dd_HH_mm_ss;
+        }
+        SimpleDateFormat sdf = new SimpleDateFormat(formater);
+        return sdf.format(date);
+    }
+    
+    public static boolean isDate(Date date)  {
+        return date != null ? true : false;
+    }
 }

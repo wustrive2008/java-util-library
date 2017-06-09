@@ -119,6 +119,19 @@
 			<artifactId>guava</artifactId>
 			<version>21.0</version>
 		</dependency>
+		
+		<!-- excel文件 -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.16</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.16</version>
+		</dependency>
 
 	</dependencies>
 </project>
