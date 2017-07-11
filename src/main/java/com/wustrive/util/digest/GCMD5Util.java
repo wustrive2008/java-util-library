@@ -6,10 +6,11 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Arrays;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class GCMD5Util {
-	private static final Logger log = Logger.getLogger(GCMD5Util.class);
+	private static final Logger log = LoggerFactory.getLogger(GCMD5Util.class);
 	private static final String HEX_NUMS_STR = "0123456789ABCDEF";
 	private static final Integer SALT_LENGTH = 12;
 

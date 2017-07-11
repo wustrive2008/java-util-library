@@ -45,10 +45,11 @@ import org.apache.http.params.CoreConnectionPNames;
 import org.apache.http.ssl.SSLContextBuilder;
 import org.apache.http.ssl.TrustStrategy;
 import org.apache.http.util.EntityUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HttpClient4Util {
-	private static final Logger log = Logger.getLogger(HttpClient4Util.class);
+	private static final Logger log = LoggerFactory.getLogger(HttpClient4Util.class);
 	private HttpClient httpclient;
 
 	public static HttpClient4Util createDefault() {

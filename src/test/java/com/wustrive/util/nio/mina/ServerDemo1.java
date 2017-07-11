@@ -2,20 +2,17 @@ package com.wustrive.util.nio.mina;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.charset.Charset;
 
-
-import org.apache.log4j.Logger;
 import org.apache.mina.core.service.IoAcceptor;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
 import org.apache.mina.filter.codec.serialization.ObjectSerializationCodecFactory;
-import org.apache.mina.filter.codec.textline.LineDelimiter;
-import org.apache.mina.filter.codec.textline.TextLineCodecFactory;
 import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ServerDemo1 {
-	private static Logger log = Logger.getLogger(ServerDemo1.class);
+	private static Logger log = LoggerFactory.getLogger(ServerDemo1.class);
 	private static int PORT = 2005;
 	public static void main(String[] args) {
 		

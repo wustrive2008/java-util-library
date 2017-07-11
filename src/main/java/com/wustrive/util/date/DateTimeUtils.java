@@ -9,11 +9,12 @@ import java.util.GregorianCalendar;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DateTimeUtils {
 
-	private final static Logger log = Logger.getLogger(DateTimeUtils.class);
+	private final static Logger log = LoggerFactory.getLogger(DateTimeUtils.class);
 
 	/**
 	 * 时间格式，如：2009-08-02 13:43

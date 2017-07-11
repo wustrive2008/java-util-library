@@ -1,12 +1,13 @@
 package com.wustrive.util.nio.mina;
 
-import org.apache.log4j.Logger;
 import org.apache.mina.core.service.IoHandler;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ClientDemo1Handle implements IoHandler {
-	private static Logger log = Logger.getLogger(ClientDemo1Handle.class);
+	private static Logger log = LoggerFactory.getLogger(ClientDemo1Handle.class);
 	public void exceptionCaught(IoSession arg0, Throwable arg1)
 			throws Exception {
 		// TODO Auto-generated method stub

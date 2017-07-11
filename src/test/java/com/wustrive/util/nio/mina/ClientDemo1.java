@@ -2,7 +2,6 @@ package com.wustrive.util.nio.mina;
 
 import java.net.InetSocketAddress;
 
-import org.apache.log4j.Logger;
 import org.apache.mina.core.future.ConnectFuture;
 import org.apache.mina.core.service.IoConnector;
 import org.apache.mina.core.service.IoHandler;
@@ -10,9 +9,11 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
 import org.apache.mina.filter.codec.serialization.ObjectSerializationCodecFactory;
 import org.apache.mina.transport.socket.nio.NioSocketConnector;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ClientDemo1 {
-	private static Logger log = Logger.getLogger(ClientDemo1.class);
+	private static Logger log = LoggerFactory.getLogger(ClientDemo1.class);
 	private static String HOST = "localhost";
 	private static int PORT = 2005;
 	
