@@ -16,3 +16,5 @@ hs_err_pid*
 #eclipse config file
 .classpath
 .project
+.idea
+*.iml
